@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首頁</title>
+  <title>Answer backstage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="./assets/style/all.css">
@@ -15,8 +15,8 @@
 
 
   
-<!-- side menu -->
 <div class="d-flex">
+  <!-- side menu -->
   <div
     class="bg-light py-5 pe-3"
     style="background-size: cover"
@@ -209,7 +209,7 @@
   <!-- menu main content -->
   <div class="tab-content w-100" id="v-main-tabContent">
     <div
-      class="tab-pane fade show active"
+      class="tab-pane fade"
       id="v-main-dashboard"
       role="tabpanel"
       aria-labelledby="v-main-dashboard"
@@ -226,20 +226,20 @@
     </div>
     <!-- Assignment content -->
     <div
-      class="tab-pane fade"
+      class="tab-pane fade show active"
       id="v-main-assignment"
       role="tabpanel"
       aria-labelledby="v-main-assignment-tab"
     >
       <!-- content-->
       <div class="p-5">
-        <!-- main header -->
+        <!-- Assignment header -->
         <div class="mb-5">
           <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
               <h2 class="me-2">Assignment</h2>
 
-              <!-- 下拉式選單 -->
+              <!-- All courses dropdown menu -->
               <div class="nav-item dropdown">
                 <a
                   class="nav-link text-dark d-flex align-items-center"
@@ -251,6 +251,7 @@
                   <span class="me-3">All Courses</span>
                   <i class="fas fa-chevron-down text-success fs-6"></i>
                 </a>
+                <!-- dropdown content -->
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li>
@@ -266,33 +267,38 @@
                 </ul>
               </div>
             </div>
+            <!-- search bar no-modal wait to be added  -->
             <div class="d-flex">
               <i class="fas fa-search text-dark fs-3 me-4"></i>
               <i class="fas fa-bell text-dark fs-3"></i>
             </div>
           </div>
         </div>
-
-        <!-- 下方main body -->
-        <!-- All 下拉式選單 -->
+        <!-- Assignment main content -->
+        <!-- dialog list dropdowns -->
         <div class="dropdown">
-          <a
-            class="btn btn-white mb-2 d-flex align-items-center"
-            href="#"
-            role="button"
-            id="filterDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <span class="text-dark fs-6 me-3"> All (4) </span>
-            <i class="fas fa-chevron-down text-success fs-5"></i>
-          </a>
+          <div class="d-flex align-items-center justify-content-between">
+            <a
+              class="btn mb-2 d-flex align-items-center"
+              href="#"
+              role="button"
+              id="filterDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="text-dark fs-6 me-3"> All (4) </span>
+              <i class="fas fa-chevron-down text-success fs-5"></i>
+            </a>
 
-          <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+
+            <small class="text-secondary">2 comments</small>
+          </div>
+
           <!-- list ->button -->
           <div class="d-flex align-items-start justify-content-between">
             <div class="d-flex justify-content-between">
@@ -447,7 +453,7 @@
                       p-3
                     "
                   >
-                    <div class="abc">
+                    <div class="content ">
                       <p class="text-secondary fs-6 m-0">
                         Chapter Assignment 2 / HTML&CSS
                       </p>
@@ -457,7 +463,7 @@
                     </div>
                     <div class="dropdown">
                       <a
-                        class="btn btn-white dropdown-toggle"
+                        class="btn btn-white"
                         href="#"
                         role="button"
                         id="dropdownMenuLink"
@@ -471,26 +477,31 @@
                         class="dropdown-menu"
                         aria-labelledby="dropdownMenuLink"
                       >
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="#">
+                          <i class="fas fa-edit me-3"></i>
+                        <p class="mb-0">Edit</p>
+                        </a></li>
                         <li>
-                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item d-flex align-items-center" href="#">
+                            <i class="far fa-trash-alt me-3"></i>
+                        <p class="mb-0">Delete</p>
+                          </a>
                         </li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </li>
+                        
                       </ul>
                     </div>
                   </div>
+                  <!-- comment 1 from student -->
                   <div class="card-body">
-                    <div class="d-flex mb-3 align-items-start">
+                    <div class="d-flex mb-3 align-items-start justify-content-between">
+                      <div class="me-3" style="width: 40px; height: 40px;">
                       <img
-                        class="rounded-circle ratio-1x1 me-2"
+                        class="rounded-circle"
                         src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/emilywang.jpeg?raw=true"
                         alt="img"
-                        style="width: 40px; height: 40px; object-fit: cover"
+                        style="width: 40px;height: 40px;object-fit: cover;"
                       />
+                    </div>
                       <div class="content pb-3 border-bottom">
                         <p class="text-dark fs-6 m-0">Emily Wang</p>
                         <p class="text-secondary" style="font-size: 12px">
@@ -539,13 +550,16 @@
                         </a>
                       </div>
                     </div>
+                    <!-- comment 2 from teacher -->
                     <div class="d-flex align-items-start">
+                      <div class="me-3" style="width: 40px; height: 40px;">
                       <img
                         src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
                         alt="user img"
-                        class="rounded-circle me-2 ratio-1x1"
+                        class="rounded-circle"
                         style="width: 40px; height: 40px; object-fit: cover"
                       />
+                    </div>
                       <div class="content">
                         <div
                           class="
@@ -562,10 +576,10 @@
                           </div>
                           <div class="iconlist d-flex">
                             <a href="#" class="link-dark"
-                              ><i class="far fa-star fs-4 me-4"></i
+                              ><i class="far fa-star fs-5 me-4"></i
                             ></a>
                             <a href="#" class="link-dark"
-                              ><i class="fas fa-pen fs-4 me-4"></i
+                              ><i class="fas fa-pen fs-5 me-4"></i
                             ></a>
                           </div>
                         </div>
@@ -662,386 +676,609 @@
         </div>
       </div>
     </div>
-    <div
-      class="tab-pane fade"
-      id="v-main-course"
-      role="tabpanel"
-      aria-labelledby="v-main-course-tab"
-    >
-      course
-    </div>
-    <!-- Admin content -->
-    <div
-      class="tab-pane fade"
-      id="v-main-admin"
-      role="tabpanel"
-      aria-labelledby="v-main-admin-tab"
-    >
-      <!-- Admin 內頁 -->
-      <!-- content-->
-      <div class="p-5">
-        <!-- main header -->
-        <div class="mb-5">
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
-              <h2 class="me-4">Admin</h2>
-              <!-- Add Admin -->
-              <!-- Button trigger modal -->
-              <button
-                type="button"
-                class="btn link-success border-0 bg-white d-flex align-items-center"
-                data-bs-toggle="modal"
-                data-bs-target="#addNewAdmin"
-              >
-                <i class="fas fa-plus fs-5 me-2"></i>
-                <span class="text-dark">Add New Admin</span>
-              </button>
+      <!-- Course Tab page -->
+      <div
+        class="tab-pane fade"
+        id="v-main-course"
+        role="tabpanel"
+        aria-labelledby="v-main-course-tab"
+      >
+        course
+      </div>
+      <!-- Admin content -->
+      <div
+        class="tab-pane fade"
+        id="v-main-admin"
+        role="tabpanel"
+        aria-labelledby="v-main-admin-tab"
+      >
+        <!-- Admin 內頁 -->
+        <!-- content-->
+        <div class="p-5">
+          <!-- main header -->
+          <div class="mb-5">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <h2 class="me-4">Admin</h2>
+                <!-- Add Admin -->
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="
+                    btn
+                    link-success
+                    border-0
+                    bg-white
+                    d-flex
+                    align-items-center
+                  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#addNewAdmin"
+                >
+                  <i class="fas fa-plus fs-5 me-2"></i>
+                  <span class="text-dark">Add New Admin</span>
+                </button>
 
-              <!-- Adit-Admin Modal -->
-              <div
-                class="modal fade"
-                id="addNewAdmin"
-                tabindex="-1"
-                aria-labelledby="addNewAdminLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title text-dark" id="addNewAdminLabel">
-                        Edit Admin
-                      </h5>
-                      <button
-                        type="button"
-                        class="btn-close link-dark"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <!--表單內容增加-->
-                      <form>
-                        <h3 class="h4 mb-3">Account</h3>
-                        <div class="mb-3">
-                          <label for="InputName" class="form-label">Name</label>
-                          <input
-                            type="text"
-                            class="form-control border-0 bg-light"
-                            id="InputName"
-                          />
-                        </div>
-                        <div class="mb-3">
-                          <label for="InputEmail" class="form-label"
-                            >Email address</label
-                          >
-                          <input
-                            type="email"
-                            class="form-control border-0 bg-light"
-                            id="InputEmail"
-                          />
-                        </div>
-                        <hr class="dropdown-divider my-3 text-dark" />
-
-                        <!--symbol-->
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          style="display: none"
-                        >
-                          <symbol
-                            id="check-circle-fill"
-                            fill="currentColor"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                            />
-                            <symbol
-                              id="exclamation-triangle-fill"
-                              fill="currentColor"
-                              viewBox="0 0 16 16"
-                            >
-                              <path
-                                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-                              />
-                            </symbol>
-                          </symbol>
-                        </svg>
-
-                        <h3 class="h4 mb-3">Verification</h3>
-                        <div
-                          class="
-                            d-flex
-                            justify-content-between
-                            align-items-center
-                            mb-3
-                          "
-                        >
-                          <div
-                            class="
-                              alert alert-success
-                              d-flex
-                              align-items-center
-                              border-0
-                              bg-white
-                              ps-0
-                            "
-                            role="alert"
-                          >
-                            <svg
-                              class="bi flex-shrink-0 me-2 text-success"
-                              width="20"
-                              height="20"
-                              role="img"
-                              aria-label="Success:"
-                            >
-                              <use xlink:href="#check-circle-fill" /></svg>
-                            <span class="text-dark fw-bold">Verified</span>
-                          </div>
-                          <p class="">2020/12/20</p>
-                        </div>
-
-                        <button
-                          class="btn btn-outline-secondary w-100 mb-3"
-                          type="button"
-                          disabled
-                        >
-                          Send Verification Mail
-                        </button>
-                        <hr class="dropdown-divider mb-3 text-dark" />
-                        <h3 class="h4 mb-3">Access Level</h3>
-                        <select
-                          class="form-select border-dark mb-3"
-                          aria-label="accessLevel"
-                        >
-                          <option selected>Admin</option>
-                          <option value="1">A Level</option>
-                          <option value="2">B Level</option>
-                          <option value="3">C Level</option>
-                        </select>
-                        <hr class="dropdown-divider my-3 text-dark" />
-                        <h3 class="h4 mb-3">Custom Access</h3>
-                        <ul class="">
-                          <li class="form-check ps-0 mb-3">
-                            <input
-                              class="form-check-input border-dark rounded-1"
-                              type="checkbox"
-                              value=""
-                              id="CheckLecture"
-                            />
-                            <label lass="form-check-label" for="CheckLecture">
-                              Lecture
-                            </label>
-                          </li>
-                          <li class="form-check ps-0 mb-3">
-                            <input
-                              class="form-check-input border-dark rounded-1"
-                              type="checkbox"
-                              value=""
-                              id="CheckCoupon"
-                            />
-                            <label class="form-check-label" for="CheckCoupon">
-                              Coupon
-                            </label>
-                          </li>
-                          <li class="form-check ps-0 mb-3">
-                            <input
-                              class="form-check-input border-dark rounded-1"
-                              type="checkbox"
-                              value=""
-                              id="CheckMessage"
-                            />
-                            <label class="form-check-label" for="CheckMessage">
-                              Message
-                            </label>
-                          </li>
-                          <li class="form-check ps-0 mb-3">
-                            <input
-                              class="form-check-input border-dark rounded-1"
-                              type="checkbox"
-                              value=""
-                              id="CheckSetting"
-                            />
-                            <label class="form-check-label" for="CheckSetting">
-                              Setting
-                            </label>
-                          </li>
-                          <li class="form-check ps-0 mb-3">
-                            <input
-                              class="form-check-input border-dark rounded-1"
-                              type="checkbox"
-                              value=""
-                              id="CheckTask"
-                            />
-                            <label class="form-check-label" for="CheckTask">
-                              Task Menu
-                            </label>
-                          </li>
-                        </ul>
-
-                        <hr class="dropdown-divider my-3 text-dark" />
-                        <h3 class="h4 mb-3">Deactivate Account</h3>
-                        <!--顯示錯誤-->
-                        <div
-                          class="
-                            alert alert-danger
-                            d-flex
-                            align-items-center
-                            border-0
-                            bg-white
-                            text-danger
-                          "
-                          role="alert"
-                        >
-                          <svg
-                            class="bi flex-shrink-0 me-2"
-                            width="24"
-                            height="24"
-                            role="img"
-                            aria-label="Danger:"
-                          >
-                            <use xlink:href="#exclamation-triangle-fill" />
-                          </svg>
-                          <div>This cannot be undone!</div>
-                        </div>
-                        <button
-                          class="btn btn-outline-danger w-100"
-                          type="button"
-                        >
-                          Deactivate This Account
-                        </button>
-                      </form>
-                    </div>
-                    <div class="modal-footer border-0">
-                      <button
-                        type="button"
-                        class="btn btn-outline-success"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        Cancel
-                      </button>
-                      <button type="button" class="btn btn-success">
-                        Update
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              
-            </div>
-            <!-- icon search and messages -->
-            <div class="d-flex">
-              <i class="fas fa-search text-dark fs-3 me-4"></i>
-              <i class="fas fa-bell text-dark fs-3"></i>
+              <!-- icon search and messages -->
+              <div class="d-flex">
+                <i class="fas fa-search text-dark fs-3 me-4"></i>
+                <i class="fas fa-bell text-dark fs-3"></i>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- 下方main body -->
-        <!-- table -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Verified</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">#1</th>
-              <td>Mark</td>
-              <td>emir.wicks@mail.com</td>
-              <td>yes</td>
-              <td>
-                <button class="border-0 bg-white m-0 p-0" type="button" data-bs-toggle="modal" data-bs-target="#user1">
-                <i class="far fa-eye"></i>
+          <!-- admin main content table -->
+          <!-- table -->
+          <table class="table mb-3">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">#1</th>
+                <td>Mark</td>
+                <td>emir.wicks@mail.com</td>
+                <td>yes</td>
+                <td>
+                  <button
+                    class="border-0 bg-white m-0 p-0"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#user1"
+                  >
+                    <i class="far fa-eye"></i>
                   </button>
                 </td>
-              <td><i class="fas fa-pen"></i></td>
-            </tr>
-            <tr>
-              <th scope="row">#2</th>
-              <td>Jacob</td>
-          <td>zaina.goldsmith@mail.com</td>
-              <td>yes</td>
-              <td><i class="far fa-eye"></i></td>
-              <td><i class="fas fa-pen"></i></td>
-            </tr>
-            <tr>
-              <th scope="row">#3</th>
-              <td>Larry the Bird</td>
-           <td>Mahima.Lopez@mail.com</td>
-              <td>yes</td>
-              <td><i class="far fa-eye"></i></td>
-              <td><i class="fas fa-pen"></i></td>
-            </tr>
-          </tbody>
-        </table>
-        
-        
-        <!-- look Modal-->
-         <!-- Modal -->
-        <div class="modal fade" id="user1" tabindex="-1" aria-labelledby="#user1Label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body d-flex" id="#user1Label">
-                <img class="ratio ratio-1x1"src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/emir.jpeg?raw=true" alt="user1 img" style="width: 141px;height: 141px; object-fit:cover; object-position:center;">
-                  <div class="ms-2 w-100">
-                <div class="d-flex justify-content-between align-items-center w-100 mb-1">
-                  <p class="mb-0">#1</p>
-                 <button type="button" class="btn-close link-dark mb-0" data-bs-dismiss="modal" aria-label="Close" ></button>
-                  </div>
-                  <p class="text-secondary mb-0">Admin</p>
-                  <p class="h5 mb-0 mb-1">Emir Wicks</p>
-                  <a class="text-secondary text-decoration-none"  >emir.wicks@mail.com</a>
-                    <div class="accordion border-0 mt-2" id="verifiedChecked">
-          <div class="accordion-item border-0">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="bg-white border-0 d-flex justify-content-between align-items-center text-success w-100 pt-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-               <p class="badage bg-light text-dark h6 py-1 px-3 rounded-6">Verified</p>
-                <i class="fas fa-chevron-down fs-6"></i> 
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#verifiedChecked">
-              <div class="accordion-body p-0">
-                <div class="row">
-                  <div class="col-7">
-                  <button class="btn btn-outline-danger w-100">Deactivate</button></div><div class="col-5">
-                  <button class="btn btn-success w-100">Edit</button></div>
-                </div>
-              </div>
-            </div>
-          </div>
+                <td>
+                  <button
+                  type="button"
+                  class="
+                  border-0 bg-white m-0 p-0
+                  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#editAdmin"
+                >
+                  <i class="fas fa-pen"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">#2</th>
+                <td>Jacob</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>yes</td>
+                <td><i class="far fa-eye"></i></td>
+                <td><i class="fas fa-pen"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">#3</th>
+                <td>Larry the Bird</td>
+                <td>Mahima.Lopez@mail.com</td>
+                <td>yes</td>
+                <td><i class="far fa-eye"></i></td>
+                <td><i class="fas fa-pen"></i></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Admin pagination -->
+          <footer class="d-flex justify-content-end">
+            <nav aria-label="Page navigation">
+            <ul class="pagination ">
+              <li class="list-group-item p-0 border-0"><a class="rounded-0 rounded-start border-success btn btn-outline-success" type="button" href="#" aria-label="Previous">
+                 <i class="fas fa-chevron-left"></i>
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">1</a></li>
+             <li class="list-group-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">2</a></li>
+              <li class="list-group-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">3</a></li>
+              <li class="list-group-item p-0 border-0"><a class="rounded-0 rounded-end border-success btn btn-outline-success" type="button" href="#" aria-label="Nex">
+                 <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+              </footer>
+          
         </div>
-         </div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        
-        
-        <!-- edit Modal-->
-        
-        
       </div>
-    </div>
-    <div
-      class="tab-pane fade"
-      id="v-main-setting"
-      role="tabpanel"
-      aria-labelledby="v-main-setting-tab"
-    >
-      Settings
+      <div
+        class="tab-pane fade"
+        id="v-main-setting"
+        role="tabpanel"
+        aria-labelledby="v-main-setting-tab"
+      >
+        Settings
+      </div>
     </div>
   </div>
 </div>
 
+<!-- Modal-->
+<!-- browse Admin -->
+<div
+  class="modal fade"
+  id="user1"
+  tabindex="-1"
+  aria-labelledby="#user1Label"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body d-flex" id="#user1Label">
+        <img
+          class="ratio ratio-1x1"
+          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/emir.jpeg?raw=true"
+          alt="user1 img"
+          style="
+            width: 141px;
+            height: 141px;
+            object-fit: cover;
+            object-position: center;
+          "
+        />
+        <div class="ms-2 w-100">
+          <div
+            class="
+              d-flex
+              justify-content-between
+              align-items-center
+              w-100
+              mb-1
+            "
+          >
+            <p class="mb-0">#1</p>
+            <button
+              type="button"
+              class="btn-close link-dark mb-0"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="text-secondary mb-0">Admin</p>
+          <p class="h5 mb-0 mb-1">Emir Wicks</p>
+          <a class="text-secondary text-decoration-none"
+            >emir.wicks@mail.com</a
+          >
+          <div class="accordion border-0 mt-2" id="verifiedChecked">
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="
+                    bg-white
+                    border-0
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                    text-success
+                    w-100
+                    pt-1
+                  "
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  <p
+                    class="
+                      badage
+                      bg-light
+                      text-dark
+                      h6
+                      py-1
+                      px-3
+                      rounded-6
+                    "
+                  >
+                    Verified
+                  </p>
+                  <i class="fas fa-chevron-down fs-6"></i>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#verifiedChecked"
+              >
+                <div class="accordion-body p-0">
+                  <div class="row">
+                    <div class="col-7">
+                      <button class="btn btn-outline-danger w-100">
+                        Deactivate
+                      </button>
+                    </div>
+                    <div class="col-5">
+                      <button class="btn btn-success w-100">
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<!-- Add New Admin Modal -->
+<div class="modal fade" id="addNewAdmin" tabindex="-1" aria-labelledby="addNewAdminLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="addNewAdminLabel">New Admin</h5>
+        <button type="button" class="btn-close link-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--表單內容增加-->
+       <form>
+        <h3 class="h4 mb-3">Account</h3>
+         <div class="mb-3">
+    <label for="InputName" class="form-label">Name</label>
+    <input type="text" class="form-control border-0 bg-light" id="InputName">
+         </div>
+  <div class="mb-3">
+    <label for="InputEmail" class="form-label">Email address</label>
+    <input type="email" class="form-control border-0 bg-light" id="InputEmail" >
+     
+  </div>
+         <hr class="dropdown-divider my-3 text-dark"> 
+   
+         <!--symbol-->
+         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  
+      <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+
+         </svg>
+         
+   <h3 class="h4 mb-3">Verification</h3>
+         <div class="mb-3">
+           <!--顯示錯誤-->
+           <div class="alert alert-danger d-flex align-items-center border-0 bg-white text-danger ps-0" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+ <span class="text-dark fw-bold">Unverified</span>
+</div>
+           </div>
+           
+      
+         
+         
+         <button class="btn btn-outline-success border-light w-100 mb-3" type="button" >Send Verification Mail</button>
+         <hr class="dropdown-divider mb-3 text-dark">
+            <h3 class="h4 mb-3">Access Level</h3>
+        
+           <select class="form-select border-dark mb-3 text-secondary" id="floatingSelect" aria-label="accessLevel">
+  <option selected >- Choose access level -</option>
+  <option value="1">A Level</option>
+  <option value="2">B Level</option>
+  <option value="3">C Level</option>
+</select>
+          
+           <hr class="dropdown-divider my-3 text-dark">
+            <h3 class="h4 mb-3">Custom Access</h3>
+<ul class="mb-5">
+    <li class="form-check ps-0 mb-3">
+  <input class="form-check-input border-dark rounded-1" type="checkbox" value="" id="CheckLecture">
+  <label lass="form-check-label" for="CheckLecture">
+    Lecture
+  </label>
+
+  </li>
+  <li class="form-check ps-0 mb-3">
+  <input class="form-check-input border-dark rounded-1" type="checkbox" value="" id="CheckCoupon">
+  <label class="form-check-label" for="CheckCoupon">
+    Coupon
+  </label>
+</li>
+  <li class="form-check ps-0 mb-3">
+  <input class="form-check-input border-dark rounded-1" type="checkbox" value="" id="CheckMessage">
+  <label class="form-check-label" for="CheckMessage">
+    Message
+  </label>
+</li>
+  <li class="form-check ps-0 mb-3">
+  <input class="form-check-input border-dark rounded-1" type="checkbox" value="" id="CheckSetting">
+  <label class="form-check-label" for="CheckSetting">
+    Setting
+  </label>
+</li>
+  <li class="form-check ps-0 mb-3">
+  <input class="form-check-input border-dark rounded-1" type="checkbox" value="" id="CheckTask">
+  <label class="form-check-label" for="CheckTask">
+    Task Menu
+  </label>
+</li>
+  
+</ul>     
+           
+             <div class="d-flex justify-content-end">
+           
+           <button class="btn btn-outline-success w-25 me-3" type="button"  aria-label="Close" data-bs-dismiss="modal">Cancel</button>
+               <button class="btn btn-success w-25" type="button"  data-bs-dismiss="modal" aria-label="Close">Add</button>
+               </div>
+           </div>
+</form>
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+    <!-- Edit-Admin Modal -->
+<div
+class="modal fade"
+id="editAdmin"
+tabindex="-1"
+aria-labelledby="editAdminLabel"
+aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="editAdminLabel">
+          Edit Admin
+        </h5>
+        <button
+          type="button"
+          class="btn-close link-dark"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!--表單內容增加-->
+        <form>
+          <h3 class="h4 mb-3">Account</h3>
+          <div class="mb-3">
+            <label for="InputName" class="form-label"
+              >Name</label
+            >
+            <input
+              type="text"
+              class="form-control border-0 bg-light"
+              id="InputName"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="InputEmail" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control border-0 bg-light"
+              id="InputEmail"
+            />
+          </div>
+          <hr class="dropdown-divider my-3 text-dark" />
+
+          <!--symbol-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            style="display: none"
+          >
+            <symbol
+              id="check-circle-fill"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+              />
+              <symbol
+                id="exclamation-triangle-fill"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                />
+              </symbol>
+            </symbol>
+          </svg>
+
+          <h3 class="h4 mb-3">Verification</h3>
+          <div
+            class="
+              d-flex
+              justify-content-between
+              align-items-center
+              mb-3
+            "
+          >
+            <div
+              class="
+                alert alert-success
+                d-flex
+                align-items-center
+                border-0
+                bg-white
+                ps-0
+              "
+              role="alert"
+            >
+              <svg
+                class="bi flex-shrink-0 me-2 text-success"
+                width="20"
+                height="20"
+                role="img"
+                aria-label="Success:"
+              >
+                <use xlink:href="#check-circle-fill" />
+              </svg>
+              <span class="text-dark fw-bold">Verified</span>
+            </div>
+            <p class="">2020/12/20</p>
+          </div>
+
+          <button
+            class="btn btn-outline-secondary w-100 mb-3"
+            type="button"
+            disabled
+          >
+            Send Verification Mail
+          </button>
+          <hr class="dropdown-divider mb-3 text-dark" />
+          <h3 class="h4 mb-3">Access Level</h3>
+          <select
+            class="form-select border-dark mb-3"
+            aria-label="accessLevel"
+          >
+            <option selected>Admin</option>
+            <option value="1">A Level</option>
+            <option value="2">B Level</option>
+            <option value="3">C Level</option>
+          </select>
+          <hr class="dropdown-divider my-3 text-dark" />
+          <h3 class="h4 mb-3">Custom Access</h3>
+          <ul class="">
+            <li class="form-check ps-0 mb-3">
+              <input
+                class="form-check-input border-dark rounded-1"
+                type="checkbox"
+                value=""
+                id="CheckLecture"
+              />
+              <label lass="form-check-label" for="CheckLecture">
+                Lecture
+              </label>
+            </li>
+            <li class="form-check ps-0 mb-3">
+              <input
+                class="form-check-input border-dark rounded-1"
+                type="checkbox"
+                value=""
+                id="CheckCoupon"
+              />
+              <label class="form-check-label" for="CheckCoupon">
+                Coupon
+              </label>
+            </li>
+            <li class="form-check ps-0 mb-3">
+              <input
+                class="form-check-input border-dark rounded-1"
+                type="checkbox"
+                value=""
+                id="CheckMessage"
+              />
+              <label
+                class="form-check-label"
+                for="CheckMessage"
+              >
+                Message
+              </label>
+            </li>
+            <li class="form-check ps-0 mb-3">
+              <input
+                class="form-check-input border-dark rounded-1"
+                type="checkbox"
+                value=""
+                id="CheckSetting"
+              />
+              <label
+                class="form-check-label"
+                for="CheckSetting"
+              >
+                Setting
+              </label>
+            </li>
+            <li class="form-check ps-0 mb-3">
+              <input
+                class="form-check-input border-dark rounded-1"
+                type="checkbox"
+                value=""
+                id="CheckTask"
+              />
+              <label class="form-check-label" for="CheckTask">
+                Task Menu
+              </label>
+            </li>
+          </ul>
+
+          <hr class="dropdown-divider my-3 text-dark" />
+          <h3 class="h4 mb-3">Deactivate Account</h3>
+          <!--顯示錯誤-->
+          <div
+            class="
+              alert alert-danger
+              d-flex
+              align-items-center
+              border-0
+              bg-white
+              text-danger
+            "
+            role="alert"
+          >
+            <svg
+              class="bi flex-shrink-0 me-2"
+              width="24"
+              height="24"
+              role="img"
+              aria-label="Danger:"
+            >
+              <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div>This cannot be undone!</div>
+          </div>
+          <button
+            class="btn btn-outline-danger w-100"
+            type="button"
+          >
+            Deactivate This Account
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer border-0">
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          Cancel
+        </button>
+        <button type="button" class="btn btn-success">
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
