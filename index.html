@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首頁</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+
+
+  
+ <!-- side menu -->
+ <div class="d-flex align-items-start">
+  <div class="bg-light py-5 pe-3 me-5" style="height: 100vh">
+    <div
+      class="d-flex flex-column justify-content-between"
+      style="height: calc(100vh - 100px)"
+    >
+      <!-- logo -->
+      <div class="header">
+        <h1>
+          <img
+            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/2b326fe971cd296bd54667a9b4a63c4b0f19fab3/week5/logo-ANSWER.svg"
+            alt="logo"
+            class="logo ms-5 mb-5"
+          />
+        </h1>
+
+        <!-- side main menu -->
+        <ul
+          class="nav flex-column w-100"
+          id="v-main-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <li class="nav-item" role="presentation">
+            <a
+              class="
+                nav-link
+                d-flex
+                align-items-center
+                px-5
+                text-start
+                link-dark
+                navbar-success
+              "
+              id="v-main-dashboard-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#v-main-dashboard"
+              type="button"
+              role="tab"
+              aria-controls="v-main-dashboard"
+              aria-selected="true"
+            >
+              <i class="fas fa-chart-bar fs-4 me-5"></i>
+              <h2 class="h4">Dashboard</h2>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="
+                nav-link
+                d-flex
+                align-items-center
+                px-5
+               link-dark
+               navbar-success 
+                text-start
+              "
+              id="v-main-question-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#v-main-question"
+              type="button"
+              role="tab"
+              aria-controls="v-main-question"
+              aria-selected="false"
+            >
+              <i class="fas fa-comments fs-4 me-5"></i>
+              <h2 class="h4">Question</h2>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="
+                nav-link
+                d-flex
+                align-items-center
+                px-5
+               link-dark
+               navbar-success 
+                text-start
+              "
+              id="v-main-assignment-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#v-main-assignment"
+              type="button"
+              role="tab"
+              aria-controls="v-main-assignment"
+              aria-selected="false"
+            >
+            <i class="fas fa-clipboard-list fs-4 me-5"></i>
+              <h2 class="h4">Assignment</h2>
+            </a>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <a
+              class="
+                nav-link
+                d-flex
+                align-items-center
+                px-5
+               link-dark
+               navbar-success 
+                text-start
+              "
+              id="v-main-course-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#v-main-course"
+              type="button"
+              role="tab"
+              aria-controls="v-main-course"
+              aria-selected="false"
+            >
+              <i class="fab fa-youtube fs-4 me-5"></i>
+              <h2 class="h4">Course</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- bottom account info -->
+      <div class="d-flex align-items-center">
+        <img
+          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
+          alt="user img"
+          class="rounded-circle d-block me-3 ratio-1x1"
+          style="width: 40px; height: 40px; object-fit: cover"
+        />
+        <div class="name">
+          <p class="text-900 mb-0">Andy Chen</p>
+          <a
+            href="mailto:andy0401@mail.com"
+            class="text-muted text-decoration-none"
+            >andy0401@mail.com</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- menu main content -->
+  <div class="tab-content w-100" id="v-main-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="v-main-dashboard"
+      role="tabpanel"
+      aria-labelledby="v-main-dashboard"
+    >
+      Dashboard
+    </div>
+    <div
+      class="tab-pane fade"
+      id="v-main-question"
+      role="tabpanel"
+      aria-labelledby="v-main-question-tab"
+    >
+      Question
+    </div>
+    <!-- Assignment content -->
+    <div
+      class="tab-pane fade"
+      id="v-main-assignment"
+      role="tabpanel"
+      aria-labelledby="v-main-assignment-tab"
+    >
+      <!-- 第一頁 -->
+      <div class="p-5">
+        <!-- 右方main header -->
+        <div class="mb-5">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <h2 class="me-2">Assignment</h2>
+
+              <!-- 下拉式選單 -->
+              <div class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="a"
+                  aria-expanded="false"
+                  >All Courses</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Something else here</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex">
+              <i class="fas fa-search text-dark fs-3 me-2"></i>
+              <i class="fas fa-bell text-dark fs-3"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 下方main body -->
+        <!-- All 下拉式選單 -->
+        <div class="dropdown">
+          <a class="btn btn-white dropdown-toggle mb-2" href="#" role="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            All (4)
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+          <!-- list ->button -->
+          <div class="d-flex align-items-start justify-content-between">
+            <div class="d-flex justify-content-between">
+              <ul
+                class="list-group flex-column p-0 m-0"
+                id="v-conversation-tab"
+                role="tablist"
+                aria-orientation="vertical"
+                style="max-width: 100%;"
+              >
+                <li
+                  class="list-group-item p-0"
+                  role="presentation"
+                >
+                  <a
+                    href="#"
+                    class="dropdown-item p-3"
+                    id="v-sub-conversation1-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#v-sub-conversation1"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-sub-conversation1"
+                    aria-selected="true"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <div class="title">
+                        <p class="text-start fs-6 text-secondary mb-0">
+                          Chapter Assignment 2
+                        </p>
+                        <p class="fs-5 text-dark mb-0">
+                          Please check this file…
+                        </p>
+                      </div>
+                      <div class="subtitle text-end">
+                        <p class="fs-6 text-dark mb-0" value="time">4 hrs ago</p>
+                        <p class="fs-5 text-secondary mb-0">Emily Wang</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-group-item p-0">
+                  <a href="#"
+                  class="dropdown-item p-3"
+                  id="v-sub-conversation2-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#v-sub-conversation2"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-sub-conversation2"
+                  aria-selected="true">
+                    <div class="d-flex justify-content-between">
+                      <div class="title">
+                        <p class="text-start fs-6 text-secondary mb-0">
+                          Chapter Assignment 2
+                        </p>
+                        <p class="fs-5 text-dark mb-0">
+                          Please check this file…
+                        </p>
+                      </div>
+                      <div class="subtitle text-end">
+                        <p class="fs-6 text-dark mb-0" value="time">4 hrs ago</p>
+                        <p class="fs-5 text-secondary mb-0">Emily Wang</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-group-item p-0">
+                  <a href="#"
+                  class="dropdown-item p-3"
+                  id="v-sub-conversation3-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#v-sub-conversation3"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-sub-conversation3"
+                  aria-selected="true"">
+                    <div class="d-flex justify-content-between">
+                      <div class="title">
+                        <p class="text-start fs-6 text-secondary mb-0">
+                          Chapter Assignment 2
+                        </p>
+                        <p class="fs-5 text-dark mb-0">
+                          Please check this file…
+                        </p>
+                      </div>
+                      <div class="subtitle text-end">
+                        <p class="fs-6 text-dark mb-0" value="time">4 hrs ago</p>
+                        <p class="fs-5 text-secondary mb-0">Emily Wang</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-group-item p-0">
+                  <a href="#"
+                  class="dropdown-item p-3"
+                  id="v-sub-conversation4-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#v-sub-conversation4"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-sub-conversation4"
+                  aria-selected="true">
+                    <div class="d-flex justify-content-between">
+                      <div class="title">
+                        <p class="text-start fs-6 text-secondary mb-0">
+                          Chapter Assignment 2
+                        </p>
+                        <p class="fs-5 text-dark mb-0">
+                          Please check this file…
+                        </p>
+                      </div>
+                      <div class="subtitle text-end">
+                        <p class="fs-6 text-dark mb-0" value="time">4 hrs ago</p>
+                        <p class="fs-5 text-secondary mb-0">Emily Wang</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Assignment conversation 1  tab content  -->
+            <div class="tab-content" id="v-conversation-tabContent" style="width: 65%;">
+              <div
+                class="tab-pane fade show active"
+                id="v-sub-conversation1"
+                role="tabpanel"
+                aria-labelledby="v-sub-conversation1"
+              >
+              <div class="card">
+                <div class="card-title bg-light d-flex justify-content-between p-3">
+                  <div class="abc">
+                  <p class="text-secondary fs-6 m-0">Chapter Assignment 2 / HTML&CSS</p>
+                  <p class="text-dark fs-5 m-0 fw-bold">Please check this file for me, thanks!</p>
+                </div>
+                <div class="dropdown">
+                  <a class="btn btn-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+                </div>
+                <div class="card-body">                    
+                  <div class="d-flex mb-3 align-items-start">
+                  <img class="rounded-circle ratio-1x1 me-2" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/emilywang.jpeg?raw=true" alt="img" style="width: 40px; height: 40px; object-fit: cover;">
+                  <div class="content pb-3 border-bottom">
+                    <p class="text-dark fs-6 m-0">Emily Wang</p>
+                    <p class="text-secondary" style="font-size: 12px;">10:38 AM (4 hours ago)</p>
+                    <p class="text-dark me-1" style="font-size: 14px;">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <a href="#" class="font-monospace link-success text-decoration-none">div</a> is bigger than the height of the <a href="#" class="font-monospace link-success text-decoration-none">img</a> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</p>
+                    <a href="#" class="btn btn-light d-flex align-items-center text-dark w-50 border border-secondary">
+                      <i class="fas fa-paperclip me-2"></i>
+                      <p class="m-0 fz-4 ">HW-2-David.zip</p>
+                    </a>
+
+                  </div>
+                  </div>                 
+                  <div class="d-flex align-items-start">
+                    <img
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
+                    alt="user img"
+                    class="rounded-circle me-2 ratio-1x1"
+                    style="width: 40px; height: 40px; object-fit: cover"
+                  />
+                  <div class="content">
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="text">
+                    <p class="text-dark fs-6 m-0">Andy Chen (You)</p>
+                    <p class="text-secondary" style="font-size: 12px;">13:24 AM (1 hours ago)</p>
+                  </div>
+                  <div class="iconlist d-flex">
+                    <a href="#" class="link-dark"><i class="far fa-star fs-4 me-4"></i></a>
+                    <a href="#" class="link-dark"><i class="fas fa-pen fs-4 me-4"></i></a>
+                  </div>
+                </div>
+                    <p class="text-dark me-1" style="font-size: 14px;">Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. </p>
+                  
+                      <p>  You can: 　</p>
+                    
+                     <p>• adjust the <a href="#" class="font-monospace link-success text-decoration-none"> vertical-align</a> of the image to position it elsewhere (e.g. the <a href="#" class="font-monospace link-success text-decoration-none">middle</a> ) or 　</p>
+                     <p> • change the <a href="#" class="font-monospace link-success text-decoration-none">display</a> so it isn’t inline.</p>
+                      
+                  </div>
+                </div>
+
+
+
+                </div>
+              </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div
+    class="tab-pane fade"
+    id="v-main-course"
+    role="tabpanel"
+    aria-labelledby="v-main-course-tab"
+  >
+    course
+  </div>
+  </div>
+  
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
