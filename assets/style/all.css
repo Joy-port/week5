@@ -35,6 +35,12 @@ body {
   background-color: #F8F9FA;
   border: 1px solid #ced4da; }
 
+.contact-reply-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -100; }
+
 /* spacing */
 .fs-7 {
   font-size: 12px; }
