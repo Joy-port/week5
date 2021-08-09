@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Answer backstage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -15,204 +18,209 @@
 
 <body>
 
-
-  
-<div class="d-flex">
-  <!-- side menu -->
-  <div
-    class="bg-light py-5 pe-3"
-    style="background-size: cover"
-    style="height: 100vh"
-  >
+  <div class="d-flex">
+    <!-- side menu -->
     <div
-      class="d-flex flex-column justify-content-between"
-      style="height: calc(100vh - 80px)"
+      class="bg-light sidemenu-container"
+      style="background-size: cover"
+      style="height: 100vh"
     >
-      <!-- logo -->
-      <div class="header">
-        <h1 class="ms-5 mb-5">
-          <img
-            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/2b326fe971cd296bd54667a9b4a63c4b0f19fab3/week5/logo-ANSWER.svg"
-            alt="logo"
-            class="logo"
-          />
-        </h1>
-
-        <!-- side main menu -->
-        <ul
-          class="nav flex-column w-100"
-          id="v-main-tab"
-          role="tablist"
-          aria-orientation="vertical"
-        >
-          <li class="nav-item" role="presentation">
-            <a
-              class="
-                nav-link
-                d-flex
-                align-items-center
-                px-5
-                text-start
-                link-dark
-                navbar-success
-                navbar-border-light
-              "
-              id="v-main-dashboard-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#v-main-dashboard"
-              type="button"
-              role="tab"
-              aria-controls="v-main-dashboard"
-              aria-selected="true"
-            >
-              <i class="fas fa-chart-bar fs-4 me-5"></i>
-              <h2 class="h4">Dashboard</h2>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="
-                nav-link
-                d-flex
-                align-items-center
-                px-5
-                link-dark
-                navbar-success
-                navbar-border-light
-                text-start
-              "
-              id="v-main-question-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#v-main-question"
-              type="button"
-              role="tab"
-              aria-controls="v-main-question"
-              aria-selected="false"
-            >
-              <i class="fas fa-comments fs-4 me-5"></i>
-              <h2 class="h4">Question</h2>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="
-                nav-link
-                d-flex
-                align-items-center
-                px-5
-                link-dark
-                navbar-success
-                navbar-border-light
-                text-start
-              "
-              id="v-main-assignment-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#v-main-assignment"
-              type="button"
-              role="tab"
-              aria-controls="v-main-assignment"
-              aria-selected="false"
-            >
-              <i class="fas fa-clipboard-list fs-4 me-5"></i>
-              <h2 class="h4">Assignment</h2>
-            </a>
-          </li>
-
-          <li class="nav-item" role="presentation">
-            <a
-              class="
-                nav-link
-                d-flex
-                align-items-center
-                px-5
-                link-dark
-                navbar-success
-                navbar-border-light
-                text-start
-              "
-              id="v-main-course-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#v-main-course"
-              type="button"
-              role="tab"
-              aria-controls="v-main-course"
-              aria-selected="false"
-            >
-              <i class="fab fa-youtube fs-4 me-5"></i>
-              <h2 class="h4">Course</h2>
-            </a>
-          </li>
-          <!-- Admin -->
-          <li class="nav-item" role="presentation">
-            <a
-              class="
-                nav-link
-                d-flex
-                align-items-center
-                px-5
-                link-dark
-                navbar-success
-                navbar-border-light
-                text-start
-              "
-              id="v-main-admin-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#v-main-admin"
-              type="button"
-              role="tab"
-              aria-controls="v-main-admin"
-              aria-selected="false"
-            >
-              <i class="fas fa-user-friends fs-4 me-5"></i>
-              <h2 class="h4">Admin</h2>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="
-                nav-link
-                d-flex
-                align-items-center
-                px-5
-                link-dark
-                navbar-success
-                navbar-border-light
-                text-start
-              "
-              id="v-main-setting-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#v-main-setting"
-              type="button"
-              role="tab"
-              aria-controls="v-main-setting"
-              aria-selected="false"
-            >
-              <i class="fas fa-cog fs-4 me-5"></i>
-              <h2 class="h4">Settings</h2>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- bottom img account info -->
-      <div class="d-flex align-items-center ms-5">
-        <img
-          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
-          alt="user img"
-          class="rounded-circle d-block me-3 ratio-1x1"
-          style="width: 40px; height: 40px; object-fit: cover"
-        />
-        <div class="name">
-          <p class="text-900 mb-0">Andy Chen</p>
-          <a
-            href="mailto:andy0401@mail.com"
-            class="text-muted text-decoration-none"
-            >andy0401@mail.com</a
+      <div
+        class="d-flex flex-column justify-content-between"
+        style="height: calc(100vh - 80px)"
+      >
+        <!-- logo -->
+        <div class="sidemenu">
+          <h1 class="sidemenu-logo">
+            <img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/2b326fe971cd296bd54667a9b4a63c4b0f19fab3/week5/logo-ANSWER.svg"
+              alt="logo"
+              class="logo"
+            />
+          </h1>
+  
+          <!-- side main menu -->
+          <ul
+            class="nav flex-column w-100"
+            id="v-main-tab"
+            role="tablist"
+            aria-orientation="vertical"
           >
+            <li class="nav-item" role="presentation">
+              <a
+                class="
+                  sidemenu-navlink
+                  nav-link
+                  d-flex
+                  align-items-center
+                  link-dark
+                  navbar-success
+                  navbar-border-light
+                "
+                id="v-main-dashboard-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#v-main-dashboard"
+                type="button"
+                role="tab"
+                aria-controls="v-main-dashboard"
+                aria-selected="true"
+              >
+              <span class="material-icons me-3">
+                assessment
+                </span>
+                <h2 class="h6 mb-0">Dashboard</h2>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="
+                sidemenu-navlink
+                nav-link
+                d-flex
+                align-items-center
+                link-dark
+                navbar-success
+                navbar-border-light
+                "
+                id="v-main-question-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#v-main-question"
+                type="button"
+                role="tab"
+                aria-controls="v-main-question"
+                aria-selected="false"
+              >
+              <span class="material-icons me-3">
+                question_answer
+                </span>
+                <h2 class="h6 mb-0">Question</h2>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="
+                sidemenu-navlink
+                nav-link
+                d-flex
+                align-items-center
+                link-dark
+                navbar-success
+                navbar-border-light
+                "
+                id="v-main-assignment-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#v-main-assignment"
+                type="button"
+                role="tab"
+                aria-controls="v-main-assignment"
+                aria-selected="false"
+              >
+              <span class="material-icons me-3">
+                assignment
+                </span>
+                <h2 class="h6 mb-0">Assignment</h2>
+              </a>
+            </li>
+  
+            <li class="nav-item" role="presentation">
+              <a
+                class="
+                sidemenu-navlink
+                nav-link
+                d-flex
+                align-items-center
+                link-dark
+                navbar-success
+                navbar-border-light
+                "
+                id="v-main-course-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#v-main-course"
+                type="button"
+                role="tab"
+                aria-controls="v-main-course"
+                aria-selected="false"
+              >
+                <span class="material-icons me-3">
+                video_library
+                </span>
+                <h2 class="h6 mb-0">Course</h2>
+              </a>
+            </li>
+            <!-- Admin -->
+            <li class="nav-item" role="presentation">
+              <a
+                class="
+                sidemenu-navlink
+                nav-link
+                d-flex
+                align-items-center
+                link-dark
+                navbar-success
+                navbar-border-light
+                "
+                id="v-main-admin-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#v-main-admin"
+                type="button"
+                role="tab"
+                aria-controls="v-main-admin"
+                aria-selected="false"
+              >
+              <span class="material-icons me-3">
+                people
+                </span>
+                <h2 class="h6 mb-0">Admin</h2>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="
+                sidemenu-navlink
+                nav-link
+                d-flex
+                align-items-center
+                link-dark
+                navbar-success
+                navbar-border-light
+                "
+                id="v-main-setting-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#v-main-setting"
+                type="button"
+                role="tab"
+                aria-controls="v-main-setting"
+                aria-selected="false"
+              >
+              <span class="material-icons me-3">
+                settings
+                </span>
+                <h2 class="h6 mb-0">Settings</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- bottom img account info -->
+        <div class="d-flex align-items-center sidemenu-user">
+          <img
+            src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true"
+            alt="user img"
+            class="rounded-circle d-block me-3 ratio-1x1"
+            style="width: 40px; height: 40px; object-fit: cover"
+          />
+          <div class="sidemenu-username">
+            <p class="text-900 mb-0">Andy Chen</p>
+            <a
+              href="mailto:andy0401@mail.com"
+              class="text-muted text-decoration-none"
+              >andy0401@mail.com</a
+            >
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    
 
   <!-- menu main content -->
   <div class="tab-content w-100" id="v-main-tabContent">
@@ -240,24 +248,26 @@
       aria-labelledby="v-main-assignment-tab"
     >
       <!-- content-->
-      <div class="p-5">
+      <div class="main-content">
         <!-- Assignment header -->
         <div class="mb-5">
           <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
-              <h2 class="me-2">Assignment</h2>
+              <h2 class="h4 mb-0 me-5">Assignment</h2>
 
               <!-- All courses dropdown menu -->
               <div class="nav-item dropdown">
                 <a
-                  class="nav-link text-dark d-flex align-items-center"
+                  class="d-flex align-items-center nav-link text-dark p-0"
                   data-bs-toggle="dropdown"
                   href="#"
                   role="a"
                   aria-expanded="false"
                 >
-                  <span class="me-3">All Courses</span>
-                  <i class="fas fa-chevron-down text-success fs-6"></i>
+                  <span class="me-2">All Courses</span>
+                  <span class="material-icons text-success">
+                    expand_more
+                    </span>
                 </a>
                 <!-- dropdown content -->
                 <ul class="dropdown-menu">
@@ -277,8 +287,12 @@
             </div>
             <!-- search bar no-modal wait to be added  -->
             <div class="d-flex">
-              <i class="fas fa-search text-dark fs-3 me-4"></i>
-              <i class="fas fa-bell text-dark fs-3"></i>
+              <span class="material-icons me-4">
+                search
+                </span>
+                <span class="material-icons">
+                  notifications_active
+                  </span>
             </div>
           </div>
         </div>
@@ -287,15 +301,17 @@
         <div class="dropdown">
           <div class="d-flex align-items-center justify-content-between">
             <a
-              class="btn mb-2 d-flex align-items-center"
+              class="btn d-flex align-items-center mb-2 p-0"
               href="#"
               role="button"
               id="filterDropdown"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <span class="text-dark fs-6 me-3"> All (4) </span>
-              <i class="fas fa-chevron-down text-success fs-5"></i>
+              <span class="text-dark fs-6 mb-0 me-2"> All (4) </span>
+              <span class="material-icons text-success">
+                expand_more
+                </span>
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="filterDropdown">
@@ -321,7 +337,7 @@
                 <li class="list-group-item p-0" role="presentation">
                   <a
                     href="#"
-                    class="p-3 btn btn-outline-dark border-0 "
+                    class="contact-list btn btn-outline-dark border-0 "
                     id="v-sub-conversation1-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#v-sub-conversation1"
@@ -332,18 +348,18 @@
                   >
                     <div class="d-flex justify-content-between">
                       <div class="title">
-                        <p class="text-start fs-6  mb-0">
+                        <p class="text-start fs-7 mb-0">
                           Chapter Assignment 2
                         </p>
-                        <p class="fs-5  mb-0 text-truncate" style="width: 60%;">
+                        <p class="fs-6  mb-0 text-truncate" style="width: 60%;">
                           Please check this file…
                         </p>
                       </div>
                       <div class="subtitle text-end">
-                        <p class="fs-6  mb-0" value="time">
+                        <p class="fs-7 mb-0" value="time">
                           4 hrs ago
                         </p>
-                        <p class="fs-5  mb-0">Emily Wang</p>
+                        <p class="fs-7  mb-0">Emily Wang</p>
                       </div>
                     </div>
                   </a>
@@ -351,7 +367,7 @@
                 <li class="list-group-item p-0">
                   <a
                     href="#"
-                    class="p-3 btn btn-outline-dark border-0"
+                    class="contact-list btn btn-outline-dark border-0"
                     id="v-sub-conversation2-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#v-sub-conversation2"
@@ -365,15 +381,15 @@
                         <p class="text-start fs-6  mb-0">
                           Chapter Assignment 2
                         </p>
-                        <p class="fs-5 mb-0 text-truncate" style="width: 60%;">
+                        <p class="fs-6 mb-0 text-truncate" style="width: 60%;">
                           Please check this file…
                         </p>
                       </div>
                       <div class="subtitle text-end">
-                        <p class="fs-6 mb-0" value="time">
+                        <p class="fs-7 mb-0" value="time">
                           4 hrs ago
                         </p>
-                        <p class="fs-5  mb-0">Emily Wang</p>
+                        <p class="fs-7  mb-0">Emily Wang</p>
                       </div>
                     </div>
                   </a>
@@ -381,7 +397,7 @@
                 <li class="list-group-item p-0">
                   <a
                     href="#"
-                    class="p-3 btn btn-outline-dark border-0"
+                    class="contact-list btn btn-outline-dark border-0"
                     id="v-sub-conversation3-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#v-sub-conversation3"
@@ -392,18 +408,18 @@
                   >
                     <div class="d-flex justify-content-between">
                       <div class="title">
-                        <p class="text-start fs-6 mb-0">
+                        <p class="text-start fs-7 mb-0">
                           Chapter Assignment 2
                         </p>
-                        <p class="fs-5 mb-0 text-truncate" style="width: 60%;">
+                        <p class="fs-6 mb-0 text-truncate" style="width: 60%;">
                           Please check this file…
                         </p>
                       </div>
                       <div class="subtitle text-end">
-                        <p class="fs-6 mb-0" value="time">
+                        <p class="fs-7 mb-0" value="time">
                           4 hrs ago
                         </p>
-                        <p class="fs-5 mb-0">Emily Wang</p>
+                        <p class="fs-7 mb-0">Emily Wang</p>
                       </div>
                     </div>
                   </a>
@@ -411,7 +427,7 @@
                 <li class="list-group-item p-0">
                   <a
                     href="#"
-                    class="p-3 btn btn-outline-dark border-0"
+                    class="contact-list btn btn-outline-dark border-0"
                     id="v-sub-conversation4-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#v-sub-conversation4"
@@ -422,18 +438,18 @@
                   >
                     <div class="d-flex justify-content-between">
                       <div class="title">
-                        <p class="text-start fs-6 mb-0">
+                        <p class="text-start fs-7 mb-0">
                           Chapter Assignment 2
                         </p>
-                        <p class="fs-5 mb-0 text-truncate" style="width: 60%;">
+                        <p class="fs-6 mb-0 text-truncate" style="width: 60%;">
                           Please check this file…
                         </p>
                       </div>
                       <div class="subtitle text-end">
-                        <p class="fs-6 mb-0" value="time">
+                        <p class="fs-7 mb-0" value="time">
                           4 hrs ago
                         </p>
-                        <p class="fs-5 mb-0">Emily Wang</p>
+                        <p class="fs-7 mb-0">Emily Wang</p>
                       </div>
                     </div>
                   </a>
@@ -455,31 +471,35 @@
                 <div class="card mb-3">
                   <div
                     class="
+                      contact-title
                       card-title
                       bg-light
                       d-flex
                       justify-content-between
-                      p-3
+                      align-items-center
+                      mb-0
                     "
                   >
-                    <div class="content ">
-                      <p class="text-secondary fs-6 m-0">
+                    <div class="content">
+                      <p class="text-secondary fs-7 m-0">
                         Chapter Assignment 2 / HTML&CSS
                       </p>
-                      <p class="text-dark fs-5 m-0 fw-bold">
+                      <p class="text-dark fs-6 m-0 fw-bold">
                         Please check this file for me, thanks!
                       </p>
                     </div>
                     <div class="dropdown">
                       <a
-                        class="btn btn-white"
+                        class="btn btn-white p-0"
                         href="#"
                         role="button"
                         id="dropdownMenuLink"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        <i class="fas fa-ellipsis-v"></i>
+                      <span class="material-icons">
+                        more_vert
+                        </span>
                       </a>
 
                       <ul
@@ -487,13 +507,17 @@
                         aria-labelledby="dropdownMenuLink"
                       >
                         <li><a class="dropdown-item d-flex align-items-center" href="#">
-                          <i class="fas fa-edit me-3"></i>
-                        <p class="mb-0">Edit</p>
+                          <span class="material-icons me-2">
+                            edit
+                            </span>
+                        <p class="mb-0 fs-7">Edit</p>
                         </a></li>
                         <li>
                           <a class="dropdown-item d-flex align-items-center" href="#">
-                            <i class="far fa-trash-alt me-3"></i>
-                        <p class="mb-0">Delete</p>
+                            <span class="material-icons me-2">
+                              delete
+                              </span>
+                        <p class="mb-0 fs-7">Delete</p>
                           </a>
                         </li>
                         
@@ -501,7 +525,7 @@
                     </div>
                   </div>
                   <!-- comment 1 from student -->
-                  <div class="card-body">
+                  <div class="card-body p-0 p-3">
                     <div class="d-flex mb-3 align-items-start justify-content-between">
                       <div class="me-3" style="width: 40px; height: 40px;">
                       <img
@@ -513,7 +537,7 @@
                     </div>
                       <div class="content pb-3 border-bottom">
                         <p class="text-dark fs-6 m-0">Emily Wang</p>
-                        <p class="text-secondary" style="font-size: 12px">
+                        <p class="text-secondary fs-7">
                           10:38 AM (4 hours ago)
                         </p>
                         <p class="text-dark me-1" style="font-size: 14px">
@@ -546,15 +570,18 @@
                         <a
                           href="#"
                           class="
-                            btn btn-light
+                            contact-attachfile
+                            btn 
                             d-flex
                             align-items-center
                             text-dark
                             w-50
-                            border border-secondary
+                            border
                           "
                         >
-                          <i class="fas fa-paperclip me-2"></i>
+                        <span class="material-icons me-2">
+                          attach_file
+                          </span>
                           <p class="m-0 fz-4">HW-2-David.zip</p>
                         </a>
                       </div>
@@ -575,21 +602,26 @@
                             d-flex
                             justify-content-between
                             align-items-center
+                            mb-3
                           "
                         >
                           <div class="text">
                             <p class="text-dark fs-6 m-0">Andy Chen (You)</p>
-                            <p class="text-secondary" style="font-size: 12px">
+                            <p class="text-secondary fs-7 mb-0" >
                               13:24 AM (1 hours ago)
                             </p>
                           </div>
                           <div class="iconlist d-flex">
                             <a href="#" class="link-dark"
-                              ><i class="far fa-star fs-5 me-4"></i
-                            ></a>
+                              ><span class="material-icons me-4">
+                                star_border
+                                </span>
+                              </a>
                             <a href="#" class="link-dark"
-                              ><i class="fas fa-pen fs-5 me-4"></i
-                            ></a>
+                              ><span class="material-icons me-4">
+                                edit
+                                </span>
+                              </a>
                           </div>
                         </div>
                         <p class="text-dark me-1" style="font-size: 14px">
@@ -599,9 +631,9 @@
                           descenders you find on letters like g, j, p and q.
                         </p>
 
-                        <p>You can: 　</p>
+                        <p style="font-size: 14px">You can: 　</p>
 
-                        <p>
+                        <p class="mb-0" style="font-size: 14px">
                           • adjust the
                           <a
                             href="#"
@@ -610,6 +642,7 @@
                               link-success
                               text-decoration-none
                             "
+                            style="font-size: 14px"
                           >
                             vertical-align</a
                           >
@@ -620,12 +653,14 @@
                               font-monospace
                               link-success
                               text-decoration-none
+                              
                             "
+                            style="font-size: 14px"
                             >middle</a
                           >
                           ) or 　
                         </p>
-                        <p>
+                        <p class="mb-0" style="font-size: 14px">
                           • change the
                           <a
                             href="#"
@@ -634,6 +669,7 @@
                               link-success
                               text-decoration-none
                             "
+                            style="font-size: 14px"
                             >display</a
                           >
                           so it isn’t inline.
@@ -711,7 +747,7 @@
           <div class="mb-5">
             <div class="d-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
-                <h2 class="me-4">Admin</h2>
+                <h2 class="h4 mb-0 me-5">Admin</h2>
                 <!-- Add Admin -->
                 <!-- Button trigger modal -->
                 <button
@@ -727,22 +763,28 @@
                   data-bs-toggle="modal"
                   data-bs-target="#addNewAdmin"
                 >
-                  <i class="fas fa-plus fs-5 me-2"></i>
+                <span class="material-icons me-2">
+                  add
+                  </span>
                   <span class="text-dark">Add New Admin</span>
                 </button>
 
               </div>
               <!-- icon search and messages -->
               <div class="d-flex">
-                <i class="fas fa-search text-dark fs-3 me-4"></i>
-                <i class="fas fa-bell text-dark fs-3"></i>
+                <span class="material-icons me-4">
+                  search
+                  </span>
+                  <span class="material-icons">
+                    notifications_active
+                    </span>
               </div>
             </div>
           </div>
 
           <!-- admin main content table -->
           <!-- table -->
-          <table class="table mb-3">
+          <table class="table table-hover mb-3">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -760,26 +802,31 @@
                 <td>emir.wicks@mail.com</td>
                 <td>yes</td>
                 <td>
-                  <button
-                    class="border-0 bg-white m-0 p-0"
+                  <a
+                    class="btn border-0 btn-white p-0 d-block"
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#user1"
                   >
-                    <i class="far fa-eye"></i>
-                  </button>
+                  <span class="material-icons">
+                    visibility
+                    </span>
+                  </a>
                 </td>
                 <td>
-                  <button
+                  <a
                   type="button"
                   class="
-                  border-0 bg-white m-0 p-0
+                  border-0 btn btn-white p-0
+                  d-block
                   "
                   data-bs-toggle="modal"
                   data-bs-target="#editAdmin"
                 >
-                  <i class="fas fa-pen"></i>
-                  </button>
+                <span class="material-icons">
+                  edit
+                  </span>
+                </a>
                 </td>
               </tr>
               <tr>
@@ -787,16 +834,64 @@
                 <td>Jacob</td>
                 <td>zaina.goldsmith@mail.com</td>
                 <td>yes</td>
-                <td><i class="far fa-eye"></i></td>
-                <td><i class="fas fa-pen"></i></td>
+                <td>
+                  <a
+                    class="btn border-0 btn-white p-0 d-block"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#user1"
+                  >
+                  <span class="material-icons">
+                    visibility
+                    </span>
+                  </a>
+                </td>
+                <td>
+                  <a
+                  type="button"
+                  class="
+                  border-0 btn btn-white p-0 d-block
+                  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#editAdmin"
+                >
+                <span class="material-icons">
+                  edit
+                  </span>
+                </a>
+                </td>
               </tr>
               <tr>
                 <th scope="row">#3</th>
                 <td>Larry the Bird</td>
                 <td>Mahima.Lopez@mail.com</td>
                 <td>yes</td>
-                <td><i class="far fa-eye"></i></td>
-                <td><i class="fas fa-pen"></i></td>
+                <td>
+                  <a
+                    class="btn border-0 btn-white p-0 d-block"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#user1"
+                  >
+                  <span class="material-icons">
+                    visibility
+                    </span>
+                  </a>
+                </td>
+                <td>
+                  <a
+                  type="button"
+                  class="
+                  border-0 btn btn-white p-0 d-block
+                  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#editAdmin"
+                >
+                <span class="material-icons">
+                  edit
+                  </span>
+                </a>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -831,7 +926,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 <!-- Modal-->
 <!-- browse Admin -->
@@ -1302,7 +1397,7 @@ aria-hidden="true"
   <div class="card h-100">
     <nav class="navbar navbar-light bg-light border-bottom">
         <div class="container-fluid">
-          <ul class="nav me-auto mb-2 mb-lg-0">
+          <ul class="nav me-auto mb-0">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle link-dark fw-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Body Text
@@ -1352,6 +1447,10 @@ aria-hidden="true"
   </div>
 </div>
 </div>
+  </div>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
