@@ -1,6 +1,11 @@
 body {
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
+span {
+  vertical-align: middle; }
+  span:hover {
+    opacity: 0.7; }
+
 /* sidemenu */
 .sidemenu-container {
   padding-top: 32px;
@@ -9,6 +14,10 @@ body {
 .sidemenu-logo {
   margin-bottom: 28px;
   margin-left: 32px; }
+  .sidemenu-logo a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: 101%; }
 
 .sidemenu-navlink {
   padding-top: 12px;
@@ -17,8 +26,9 @@ body {
 
 .sidemenu-user {
   padding-left: 32px; }
-  .sidemenu-username {
-    padding-right: 80px; }
+
+.sidemenu-title {
+  padding-right: 80px; }
 
 .main-content {
   padding: 32px; }
@@ -34,12 +44,6 @@ body {
   padding: 8px 12px;
   background-color: #F8F9FA;
   border: 1px solid #ced4da; }
-
-.contact-reply-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -100; }
 
 /* spacing */
 .fs-7 {

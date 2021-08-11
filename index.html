@@ -20,23 +20,21 @@
 
   <div class="d-flex">
     <!-- side menu -->
-    <div
-      class="bg-light sidemenu-container"
-      style="background-size: cover"
-      style="height: 100vh"
-    >
+    <div class="bg-light">
       <div
-        class="d-flex flex-column justify-content-between"
-        style="height: calc(100vh - 80px)"
+        class="sidemenu-container d-flex flex-column justify-content-between"
+        style="height:100vh"
       >
         <!-- logo -->
         <div class="sidemenu">
           <h1 class="sidemenu-logo">
+            <a href="#">
             <img
               src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/2b326fe971cd296bd54667a9b4a63c4b0f19fab3/week5/logo-ANSWER.svg"
               alt="logo"
               class="logo"
             />
+            </a>
           </h1>
   
           <!-- side main menu -->
@@ -209,12 +207,11 @@
             class="rounded-circle d-block me-3 ratio-1x1"
             style="width: 40px; height: 40px; object-fit: cover"
           />
-          <div class="sidemenu-username">
+          <div class="sidemenu-title">
             <p class="text-900 mb-0">Andy Chen</p>
-            <a
-              href="mailto:andy0401@mail.com"
-              class="text-muted text-decoration-none"
-              >andy0401@mail.com</a
+            <p
+              class="text-secondary mb-0"
+              >andy0401@mail.com</p
             >
           </div>
         </div>
@@ -287,12 +284,17 @@
             </div>
             <!-- search bar no-modal wait to be added  -->
             <div class="d-flex">
-              <span class="material-icons me-4">
-                search
-                </span>
-                <span class="material-icons">
-                  notifications_active
+              <a href="#" class="link-dark p-0 m-0">
+                <span class="material-icons me-4">
+                  search
                   </span>
+              </a>
+              <a href="#" class="link-dark p-0 m-0">
+                <span class="material-icons">
+                notifications_active
+                </span>
+              </a>
+              
             </div>
           </div>
         </div>
@@ -325,7 +327,6 @@
 
           <!-- Assignment body contact content -->
           <div class="d-flex align-items-start justify-content-between">
-            <div class="d-flex justify-content-between">
               <!-- contact list -->
               <ul
                 class="list-group flex-column p-0 m-0"
@@ -378,7 +379,7 @@
                   >
                     <div class="d-flex justify-content-between">
                       <div class="title">
-                        <p class="text-start fs-6  mb-0">
+                        <p class="text-start fs-7  mb-0">
                           Chapter Assignment 2
                         </p>
                         <p class="fs-6 mb-0 text-truncate" style="width: 60%;">
@@ -455,7 +456,7 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            
             <!-- Assignment conversation 1  tab content  -->
             <div
               class="tab-content"
@@ -481,12 +482,12 @@
                     "
                   >
                     <div class="content">
-                      <p class="text-secondary fs-7 m-0">
+                      <h3 class="text-secondary fs-7 m-0">
                         Chapter Assignment 2 / HTML&CSS
-                      </p>
-                      <p class="text-dark fs-6 m-0 fw-bold">
+                      </h3>
+                      <h3 class="text-dark fs-6 m-0 fw-bold">
                         Please check this file for me, thanks!
-                      </p>
+                      </h3>
                     </div>
                     <div class="dropdown">
                       <a
@@ -543,25 +544,25 @@
                         <p class="text-dark me-1" style="font-size: 14px">
                           Hi Teacher, the attached file is my homework of
                           chapter 2. And here comes a question: Why in the
-                          following code the height of the
-                          <a
-                            href="#"
+                          following code the height of the 
+                          <code
                             class="
-                              font-monospace
-                              link-success
-                              text-decoration-none
+                              text-success
+                              bg-light
+                              rounded-1
+                              fs-6
                             "
-                            >div</a
+                            >  div</code
                           >
                           is bigger than the height of the
-                          <a
-                            href="#"
-                            class="
-                              font-monospace
-                              link-success
-                              text-decoration-none
-                            "
-                            >img</a
+                          <code
+                          class="
+                            text-success
+                            bg-light
+                            rounded-1
+                            fs-6
+                          "
+                            >img</code
                           >
                           ? There is a gap below the image, but it doesn’t seems
                           to be a padding/margin. What is the gap or extra space
@@ -632,48 +633,50 @@
                         </p>
 
                         <p style="font-size: 14px">You can: 　</p>
-
-                        <p class="mb-0" style="font-size: 14px">
-                          • adjust the
-                          <a
-                            href="#"
-                            class="
-                              font-monospace
-                              link-success
-                              text-decoration-none
-                            "
+                        <ul>
+                          
+                        <li style="font-size: 14px">
+                          adjust the
+                          <code
+                          class="
+                            text-success
+                            bg-light
+                            rounded-1
+                            fs-6
+                          "
                             style="font-size: 14px"
                           >
-                            vertical-align</a
+                            vertical-align</code
                           >
                           of the image to position it elsewhere (e.g. the
-                          <a
-                            href="#"
-                            class="
-                              font-monospace
-                              link-success
-                              text-decoration-none
-                              
-                            "
+                          <code
+                          class="
+                            text-success
+                            bg-light
+                            rounded-1
+                            fs-6
+                          "
                             style="font-size: 14px"
-                            >middle</a
+                            >middle</code
                           >
                           ) or 　
-                        </p>
-                        <p class="mb-0" style="font-size: 14px">
-                          • change the
-                          <a
-                            href="#"
-                            class="
-                              font-monospace
-                              link-success
-                              text-decoration-none
-                            "
+                        </li>
+                        <li class="mb-0" style="font-size: 14px">
+                          change the
+                          <code
+                          class="
+                            text-success
+                            bg-light
+                            rounded-1
+                            fs-6
+                          "
                             style="font-size: 14px"
-                            >display</a
+                            >display</code
                           >
                           so it isn’t inline.
-                        </p>
+                        </li>
+                      
+                        </ul>
                       </div>
                     </div>
 
@@ -775,12 +778,16 @@
               </div>
               <!-- icon search and messages -->
               <div class="d-flex">
-                <span class="material-icons me-4">
-                  search
-                  </span>
-                  <span class="material-icons">
-                    notifications_active
+                <a href="#" class="link-dark p-0 m-0">
+                  <span class="material-icons me-4">
+                    search
                     </span>
+                </a>
+                <a href="#" class="link-dark p-0 m-0">
+                  <span class="material-icons">
+                  notifications_active
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -902,14 +909,14 @@
           <footer class="d-flex justify-content-end">
             <nav aria-label="Page navigation">
             <ul class="pagination ">
-              <li class="list-group-item p-0 border-0"><a class="rounded-0 rounded-start  border-success btn btn-outline-success" type="button" href="#" aria-label="Previous">
+              <li class="page-item p-0 border-0"><a class="rounded-0 rounded-start  border-success btn btn-outline-success" type="button" href="#" aria-label="Previous">
                  <i class="fas fa-chevron-left"></i>
                 </a>
               </li>
-              <li class="list-group-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">1</a></li>
-             <li class="list-group-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">2</a></li>
-              <li class="list-group-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">3</a></li>
-              <li class="list-group-item p-0 border-0"><a class="rounded-0 rounded-end border-success btn btn-outline-success" type="button" href="#" aria-label="Nex">
+              <li class="page-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">1</a></li>
+             <li class="page-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">2</a></li>
+              <li class="page-item p-0 border-0"><a class="rounded-0 border-success btn btn-outline-success" type="button" href="#">3</a></li>
+              <li class="page-item p-0 border-0"><a class="rounded-0 rounded-end border-success btn btn-outline-success" type="button" href="#" aria-label="Nex">
                  <i class="fas fa-chevron-right"></i>
                 </a>
               </li>
@@ -932,7 +939,7 @@
 
 
 <!-- Modal-->
-<!-- browse Admin -->
+<!-- browse Admin user1 -->
 <div
   class="modal fade"
   id="user1"
@@ -1029,7 +1036,10 @@
                       </button>
                     </div>
                     <div class="col-5">
-                      <button class="btn btn-success rounded-0 rounded-1 w-100">
+                      <button class="btn btn-success rounded-0 rounded-1 w-100"
+                      data-bs-toggle="modal"
+                      data-bs-dismiss="modal"
+                      data-bs-target="#editAdmin">
                         Edit
                       </button>
                     </div>
@@ -1047,7 +1057,7 @@
     
 <!-- Add New Admin Modal -->
 <div class="modal fade" id="addNewAdmin" tabindex="-1" aria-labelledby="addNewAdminLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog  modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-dark" id="addNewAdminLabel">New Admin</h5>
@@ -1160,7 +1170,7 @@ tabindex="-1"
 aria-labelledby="editAdminLabel"
 aria-hidden="true"
 >
-  <div class="modal-dialog">
+  <div class="modal-dialog  modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-dark" id="editAdminLabel">
